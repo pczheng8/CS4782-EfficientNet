@@ -54,14 +54,14 @@ CS4782-EfficientNet/
 Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 
 ## 3.6 Results/Insights
-- **Baseline (B0):** Achieved **89.45 %** top-1 accuracy at **0.39 GFLOPs** after 35 epochs on CIFAR-10, matching within 0.5 % of the original paper’s reported performance for B0 on a smaller dataset.  
-- **Depth Scaling:** Increasing only depth (ϕ→1) yielded **90.12 %** accuracy @ **0.55 GFLOPs**, a modest +0.67 % gain but a 40 % increase in compute.  
-- **Width Scaling:** Scaling channels alone gave **89.80 %** @ **0.52 GFLOPs**, +0.35 % at +33 % FLOPs.  
-- **Resolution Scaling:** Raising input resolution improved accuracy to **90.08 %** @ **0.60 GFLOPs**, +0.63 % with +54 % FLOPs.  
-- **Compound Scaling:** Joint scaling (ϕ→1) achieved **90.75 %** @ **0.62 GFLOPs**, the best trade-off: +1.30 % over B0 for a 59 % compute increase.  
+- **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.39 GFLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
+- **Depth Scaling:** Increasing only depth (ϕ→1) yielded **90.12%** accuracy @ **0.55 GFLOPs**, a modest +0.67% gain but a 40% increase in compute.  
+- **Width Scaling:** Scaling channels alone gave **89.80%** @ **0.52 GFLOPs**, +0.35% at +33% FLOPs.  
+- **Resolution Scaling:** Raising input resolution improved accuracy to **90.08%** @ **0.60 GFLOPs**, +0.63% with +54% FLOPs.  
+- **Compound Scaling:** Joint scaling (ϕ→1) achieved **90.75%** @ **0.62 GFLOPs**, the best trade-off: +1.30% over B0 for a 59% compute increase.  
 - **Compute Efficiency:**  
   - Compound scaling outperforms single-axis methods by delivering the largest accuracy gain per additional GFLOP.  
-  - Depth-only: 0.017 % / 0.01 GFLOP; Width-only: 0.010 % / 0.01; Resolution-only: 0.011 % / 0.01; Compound: 0.021 % / 0.01.  
+  - Depth-only: 0.017% / 0.01 GFLOP; Width-only: 0.010% / 0.01; Resolution-only: 0.011% / 0.01; Compound: 0.021% / 0.01.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
 [INSERT FIGURE HERE]
