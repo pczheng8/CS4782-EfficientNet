@@ -67,14 +67,12 @@ Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 _**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Notebook**_
 
 ## 3.6 Results/Insights
-- **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.39 GFLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
-- **Depth Scaling:** Increasing only depth (ϕ→1) yielded **90.12%** accuracy @ **0.55 GFLOPs**, a modest +0.67% gain but a 40% increase in compute.  
-- **Width Scaling:** Scaling channels alone gave **89.80%** @ **0.52 GFLOPs**, +0.35% at +33% FLOPs.  
-- **Resolution Scaling:** Raising input resolution improved accuracy to **90.08%** @ **0.60 GFLOPs**, +0.63% with +54% FLOPs.  
-- **Compound Scaling:** Joint scaling (ϕ→1) achieved **90.75%** @ **0.62 GFLOPs**, the best trade-off: +1.30% over B0 for a 59% compute increase.  
-- **Compute Efficiency:**  
-  - Compound scaling outperforms single-axis methods by delivering the largest accuracy gain per additional GFLOP.  
-  - Depth-only: 0.017% / 0.01 GFLOP; Width-only: 0.010% / 0.01; Resolution-only: 0.011% / 0.01; Compound: 0.021% / 0.01.  
+- **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.82B FLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
+- **Depth Scaling:** Increasing only depth (ϕ→1) yielded **86.31%** accuracy @ **3.35B FLOPs**.  
+- **Width Scaling:** Scaling channels alone gave **88.40%** @ **3.02B FLOPs**.  
+- **Resolution Scaling:** Raising input resolution improved accuracy to **88.80%** @ **3.27B FLOPs**.  
+- **Compound Scaling:** Joint scaling (ϕ→1) achieved **85.21%** @ **1.82B FLOPs**.  
+- **Compute Efficiency:** Our results for the compound scaling did not outperform single-axis methods in accuracy and the baseline model actually performed the best.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
 ![Fig](results/table.png)
@@ -82,14 +80,13 @@ _**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Not
 _Figure 3: Accuracy and FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
-- **Key Takeaway:** Under constrained compute and dataset size, EfficientNet’s compound scaling still provides the best accuracy–efficiency trade-off compared to scaling depth, width, or resolution in isolation.  
+- **Key Takeaway:** Under constrained compute and dataset size, EfficientNet’s compound scaling did not provide us with the best accuracy–efficiency trade-off compared to the baseline model, depth only, width only, or resolution only models.  
 - **Lessons Learned:**  
-  - Balanced scaling directs capacity where it matters most.  
-  - Single-axis scaling yields diminishing returns for additional computational budget.  
-  - Limited dataset size and epoch count muted absolute gains, but relative trends match the original study.  
+  - The paper states that balanced scaling directs capacity where it matters most, but perhaps only with large data sets and more epochs to train on.  
+  - The limited dataset size and epoch count could have muted the gains described in the original paper.  
 - **Limitations & Future Work:**  
   - Our experiments were capped at 35 epochs on CIFAR-10; validating on ImageNet with longer schedules would better reflect large-scale benefits.  
-  - Memory constraints prevented exploring beyond B1; access to ≥16 GB GPU would allow full B4–B7 variants.  
+  - Memory constraints prevented exploring beyond B2; access to ≥16 GB GPU would allow full B4–B7 variants.  
   - Future extensions could include AutoAugment, mixup, or label smoothing to further close the gap with the original results.
 
 ## 3.8 References
