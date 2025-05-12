@@ -55,12 +55,9 @@ In your training script, you’ll see:
 4. **Launch and run the notebook:**
 Open the notebook server with:
    ```bash
-    python -m notebook code/EfficientNet.ipynb
+    python3 -m notebook code/EfficientNet.ipynb
 In your browser, click EfficientNet.ipynb and choose Kernel -> Restart Kernel and Run All Cells.
 
-6. **Evaluate & plot:**
-   ```bash
-   python experiments/evaluate.py --output results/
 Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 
 ## 3.6 Results/Insights
