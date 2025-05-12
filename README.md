@@ -17,7 +17,7 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 ## 3.3 GitHub Contents
 ```bash
 CS4782-EfficientNet/
-├── code/             # re-implementation of EfficientNet
+├── code/             # our re-implementation of EfficientNet
 ├── results/          # logs, figures, plots (accuracy vs FLOPs)
 ├── poster/           # poster presented in class
 ├── report/           # final written report
