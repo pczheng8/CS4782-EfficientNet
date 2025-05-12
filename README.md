@@ -16,6 +16,7 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
   *Figure 1: Scaling Up EfficientNet-B0 with Different Methods. (Tan & Le, 2020)*
   
   ![Table7](https://github.com/user-attachments/assets/be70f545-eadd-4d96-a5c8-eba2b03f3900)
+  
   *Figure 2: Scaled Model Results (Tan & Le, 2020)*
 
 ## 3.3 GitHub Contents
