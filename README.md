@@ -44,7 +44,7 @@ CS4782-EfficientNet/
 
 2. **Install dependencies:**
    ```bash
-   pip install torch torchvision matplotlib tqdm
+   pip install torch torchvision matplotlib tqdm notebook
 
 3. **Prepare data:**
 The code uses torchvision.datasets.CIFAR10--no manual download required.
@@ -52,19 +52,16 @@ In your training script, you’ll see:
    ```python
    from torchvision.datasets import CIFAR10
 
-4. **Train:**
+4. **Launch and run the notebook:**
+Open the notebook server with:
    ```bash
-   python experiments/train.py \
-    --model efficientnet_b0 \
-    --scale compound \
-    --epochs 35
+    python -m notebook code/EfficientNet.ipynb
+In your browser, click EfficientNet.ipynb and choose Kernel -> Restart Kernel and Run All Cells.
 
-5. **Evaluate & plot:**
+6. **Evaluate & plot:**
    ```bash
    python experiments/evaluate.py --output results/
 Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
-
-_**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Notebook**_
 
 ## 3.6 Results/Insights
 - **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.82B FLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
