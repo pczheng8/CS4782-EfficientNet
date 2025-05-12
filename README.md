@@ -33,13 +33,15 @@ CS4782-EfficientNet/
 ## 3.5 Reproduction Steps
 1. **Clone & install:**  
    ```bash
-   git clone <repo-url>
-   cd <repo>
+   git clone https://github.com/pczheng8/CS4782-EfficientNet.git
+   cd CS4782-EfficientNet
    pip install -r requirements.txt
 
-2. **Download data:**
-   ```bash
-   python data/download_cifar10.py
+2. **Prepare data:**
+The code uses torchvision.datasets.CIFAR10--no manual download required.
+In your training script, you’ll see:
+   ```python
+   from torchvision.datasets import CIFAR10
 
 3. **Train:**
    ```bash
