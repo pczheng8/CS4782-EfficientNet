@@ -15,13 +15,16 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
   *Figure 1: Single-axis vs compound scaling (Tan & Le, 2020)*
 
 ## 3.3 GitHub Contents
-├── data/ # CIFAR-10 download & preprocessing scripts
-├── models/ # EfficientNet-B0 & scaled variants (MBConv + SE blocks)
-├── experiments/ # training & evaluation scripts
-├── results/ # logs, plots (accuracy vs FLOPs)
-├── requirements.txt # Python dependencies
-└── README.md
-
+```bash
+CS4782-EfficientNet/
+├── data/             # CIFAR-10 download & preprocessing scripts
+├── models/           # EfficientNet-B0 & scaled variants (MBConv + SE blocks)
+├── experiments/      # training & evaluation scripts
+├── results/          # logs, plots (accuracy vs FLOPs)
+├── docs/             # figures and README assets
+├── requirements.txt  # Python dependencies
+└── README.md         # this file
+```
 
 ## 3.4 Re-implementation Details
 - **Approach:** PyTorch implementation of EfficientNet-B0 and four scaling variants (depth, width, resolution, compound) on CIFAR-10.  
@@ -41,9 +44,9 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 3. **Train:**
    ```bash
    python experiments/train.py \
-  --model efficientnet_b0 \
-  --scale compound \
-  --epochs 35
+    --model efficientnet_b0 \
+    --scale compound \
+    --epochs 35
 
 4. **Evaluate & plot:**
    ```bash
