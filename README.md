@@ -17,12 +17,12 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 ## 3.3 GitHub Contents
 ```bash
 CS4782-EfficientNet/
-├── data/             # CIFAR-10 download & preprocessing scripts
-├── models/           # EfficientNet-B0 & scaled variants (MBConv + SE blocks)
-├── experiments/      # training & evaluation scripts
-├── results/          # logs, plots (accuracy vs FLOPs)
-├── docs/             # figures and README assets
-├── requirements.txt  # Python dependencies
+├── code/             # re-implementation of EfficientNet
+├── results/          # logs, figures, plots (accuracy vs FLOPs)
+├── poster/           # poster presented in class
+├── report/           # final written report
+├── LICENSE           # MIT License
+├── .gitignore        # .gitignore file
 └── README.md         # this file
 ```
 
