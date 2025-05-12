@@ -78,6 +78,7 @@ _**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Not
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
 ![Fig](results/table.png)
+
 _Figure 3: Accuracy and FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
