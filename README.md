@@ -31,29 +31,34 @@ CS4782-EfficientNet/
 - **Setup:** Trained for 35 epochs with RMSProp (momentum 0.9, α = 0.9, ε = 0.1), linear-to-exponential LR schedule, cross-entropy loss. OOM errors prevented scaling beyond B1.
 
 ## 3.5 Reproduction Steps
-1. **Clone & install:**  
+1. **Clone the repo:**  
    ```bash
    git clone https://github.com/pczheng8/CS4782-EfficientNet.git
    cd CS4782-EfficientNet
-   pip install -r requirements.txt
 
-2. **Prepare data:**
+2. **Install dependencies:**
+   ```bash
+   pip install torch torchvision matplotlib tqdm
+
+3. **Prepare data:**
 The code uses torchvision.datasets.CIFAR10--no manual download required.
 In your training script, you’ll see:
    ```python
    from torchvision.datasets import CIFAR10
 
-3. **Train:**
+4. **Train:**
    ```bash
    python experiments/train.py \
     --model efficientnet_b0 \
     --scale compound \
     --epochs 35
 
-4. **Evaluate & plot:**
+5. **Evaluate & plot:**
    ```bash
    python experiments/evaluate.py --output results/
 Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
+
+^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Notebook
 
 ## 3.6 Results/Insights
 - **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.39 GFLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
