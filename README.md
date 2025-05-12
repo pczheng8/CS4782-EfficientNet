@@ -10,7 +10,8 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 
 ## 3.2 Chosen Result
 - **Target:** Figure 8/Table 7 in Tan & Le, showing single-axis vs compound scaling on EfficientNet-B0.  
-- **Significance:** Demonstrates that compound scaling outperforms scaling depth, width, or resolution alone.  
+- **Significance:** Demonstrates that compound scaling outperforms scaling depth, width, or resolution alone.
+
   ![Figure8](https://github.com/user-attachments/assets/9eed60a7-ca91-4d39-846b-271e61153da7)
   
   *Figure 1: Scaling Up EfficientNet-B0 with Different Methods. (Tan & Le, 2020)*
