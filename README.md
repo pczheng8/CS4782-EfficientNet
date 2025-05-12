@@ -34,7 +34,7 @@ CS4782-EfficientNet/
 
 ## 3.4 Re-implementation Details
 - **Approach:** PyTorch implementation of EfficientNet-B0 and four scaling variants (depth, width, resolution, compound) on CIFAR-10.  
-- **Setup:** Trained for 35 epochs with RMSProp (momentum 0.9, α = 0.9, ε = 0.1), linear-to-exponential LR schedule, cross-entropy loss. OOM errors prevented scaling beyond B1.
+- **Setup:** Trained for 35 epochs with RMSProp (momentum 0.9, α = 0.9, ε = 0.1), linear-to-exponential LR schedule, cross-entropy loss. OOM errors prevented scaling beyond B2.
 
 ## 3.5 Reproduction Steps
 1. **Clone the repo:**  
@@ -62,10 +62,10 @@ Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 
 ## 3.6 Results/Insights
 - **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.82B FLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
-- **Depth Scaling:** Increasing only depth (ϕ→1) yielded **86.31%** accuracy @ **3.35B FLOPs**.  
+- **Depth Scaling:** Increasing only depth (ϕ→2) yielded **86.31%** accuracy @ **3.35B FLOPs**.  
 - **Width Scaling:** Scaling channels alone gave **88.40%** @ **3.02B FLOPs**.  
 - **Resolution Scaling:** Raising input resolution improved accuracy to **88.80%** @ **3.27B FLOPs**.  
-- **Compound Scaling:** Joint scaling (ϕ→1) achieved **85.21%** @ **1.82B FLOPs**.  
+- **Compound Scaling:** Joint scaling (ϕ→2) achieved **85.21%** @ **1.82B FLOPs**.  
 - **Compute Efficiency:** Our results for the compound scaling did not outperform single-axis methods in accuracy and the baseline model actually performed the best.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
@@ -88,4 +88,4 @@ _Figure 3: Accuracy and FLOPs for each scaling strategy_
 - CIFAR-10 dataset: Krizhevsky & Hinton, 2009.
 
 ## 3.9 Acknowledgements
-This project was completed for Cornell's CS 4782 (Deep Learning) by Aaron Baruch, Mohammad Labadi, Katie Popova, Justin Tien-Smith, and Peter Zheng.
+This project was completed for Cornell's CS 4782 (Deep Learning) by Aaron Baruch, Mohammad Labadi, Katerina Popova, Justin Tien-Smith, and Peter Zheng.
