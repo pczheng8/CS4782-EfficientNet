@@ -13,6 +13,7 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 - **Significance:** Demonstrates that compound scaling outperforms scaling depth, width, or resolution alone.
 
   ![Figure8](https://github.com/user-attachments/assets/9eed60a7-ca91-4d39-846b-271e61153da7)
+  
   *Figure 1: Scaling Up EfficientNet-B0 with Different Methods. (Tan & Le, 2020)*
   
   ![Table7](https://github.com/user-attachments/assets/be70f545-eadd-4d96-a5c8-eba2b03f3900)
