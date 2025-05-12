@@ -11,11 +11,10 @@ A PyTorch re-implementation of **EfficientNet: Rethinking Model Scaling for Conv
 ## 3.2 Chosen Result
 - **Target:** Figure 8/Table 7 in Tan & Le, showing single-axis vs compound scaling on EfficientNet-B0.  
 - **Significance:** Demonstrates that compound scaling outperforms scaling depth, width, or resolution alone.  
-  ![Scaling Strategies Comparison](INSERT FIGURE HERE)  
-![Figure8](https://github.com/user-attachments/assets/9eed60a7-ca91-4d39-846b-271e61153da7)
-![Table7](https://github.com/user-attachments/assets/be70f545-eadd-4d96-a5c8-eba2b03f3900)
-
-  *Figure 1: Single-axis vs compound scaling (Tan & Le, 2020)*
+  ![Figure8](https://github.com/user-attachments/assets/9eed60a7-ca91-4d39-846b-271e61153da7)
+  *Figure 1: Scaling Up EfficientNet-B0 with Different Methods. (Tan & Le, 2020)*
+  ![Table7](https://github.com/user-attachments/assets/be70f545-eadd-4d96-a5c8-eba2b03f3900)
+  *Figure 2: Scaled Model Results (Tan & Le, 2020)*
 
 ## 3.3 GitHub Contents
 ```bash
@@ -75,7 +74,7 @@ Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
 [INSERT FIGURE HERE]
-_Figure 2: Accuracy vs FLOPs for each scaling strategy_
+_Figure 3: Accuracy vs FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
 - **Key Takeaway:** Under constrained compute and dataset size, EfficientNet’s compound scaling still provides the best accuracy–efficiency trade-off compared to scaling depth, width, or resolution in isolation.  
