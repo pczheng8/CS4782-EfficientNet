@@ -77,8 +77,8 @@ _**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Not
   - Depth-only: 0.017% / 0.01 GFLOP; Width-only: 0.010% / 0.01; Resolution-only: 0.011% / 0.01; Compound: 0.021% / 0.01.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
-_**[INSERT FIGURE HERE]**_
-_Figure 3: Accuracy vs FLOPs for each scaling strategy_
+![Fig](results/table.png)
+_Figure 3: Accuracy and FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
 - **Key Takeaway:** Under constrained compute and dataset size, EfficientNet’s compound scaling still provides the best accuracy–efficiency trade-off compared to scaling depth, width, or resolution in isolation.  
