@@ -64,7 +64,7 @@ In your training script, you’ll see:
    python experiments/evaluate.py --output results/
 Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 
-^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Notebook
+_**^^^ 4. and 5. are PLACEHOLDER. Probably just run the cells in the Jupyter Notebook**_
 
 ## 3.6 Results/Insights
 - **Baseline (B0):** Achieved **89.45%** top-1 accuracy at **0.39 GFLOPs** after 35 epochs on CIFAR-10, matching within 0.5% of the original paper’s reported performance for B0 on a smaller dataset.  
@@ -77,7 +77,7 @@ Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
   - Depth-only: 0.017% / 0.01 GFLOP; Width-only: 0.010% / 0.01; Resolution-only: 0.011% / 0.01; Compound: 0.021% / 0.01.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
-[INSERT FIGURE HERE]
+_**[INSERT FIGURE HERE]**_
 _Figure 3: Accuracy vs FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
