@@ -69,9 +69,13 @@ Requirements: Python 3.8+, PyTorch 1.12+, ≥8 GB GPU RAM recommended.
 - **Compute Efficiency:** Our results for the compound scaling did not outperform single-axis methods in accuracy and the baseline model actually performed the best.  
 - **Training Dynamics:** Compound variant converged slightly faster (plateau at epoch 28) than other scalings (plateau at ~30–32 epochs), indicating better utilization of capacity under limited data.
 
+![Fig](results/plot.png)
+
+_Figure 3: Comparison of different methods for scaling_
+
 ![Fig](results/table.png)
 
-_Figure 3: Accuracy and FLOPs for each scaling strategy_
+_Figure 4: Accuracy and FLOPs for each scaling strategy_
 
 ## 3.7 Conclusion
 - **Key Takeaway:** Under constrained compute and dataset size, EfficientNet’s compound scaling did not provide us with the best accuracy–efficiency trade-off compared to the baseline model, depth only, width only, or resolution only models.  
